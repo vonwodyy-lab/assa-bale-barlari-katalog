@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASSA SPOR Bale Barı Modelleri</title>
+<meta name="description" content="ASSA SPOR bale barı modelleri: ayarlanabilir, duvara monte, taşınabilir ve sabit yükseklik seçenekleriyle okul, dans stüdyosu ve kurumsal projeler için teklif alın.">
+<meta property="og:title" content="ASSA SPOR Bale Barı Modelleri">
+<meta property="og:description" content="Okullar, dans stüdyoları ve kurumsal projeler için bale barı modelleri. Ürünleri seçin, WhatsApp'tan teklif alın.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/bale-barlari/agirlikli-yukseklik-ayarli-bale-bari.jpg">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; margin: 0; color: #222; line-height: 1.5; background: #fff; }
+  .topbar { background: #111; color: #fff; text-align: center; font-size: 13px; padding: 8px; }
+  header { border-bottom: 1px solid #eee; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .logo { font-size: 24px; font-weight: 800; letter-spacing: 1px; color: #111; text-decoration: none; }
+  .contact { font-size: 14px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+  .page-hero {
+    margin-bottom: 28px;
+    padding: 24px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  }
+  .page-hero h1 { margin: 0 0 8px; font-size: 30px; color: #111; }
+  .page-hero p { margin: 0; max-width: 760px; color: #555; font-size: 15px; }
+
+  .cat-heading { font-size: 20px; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #111; color: #111; }
+  .subcats, .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
+  .subcats { margin-bottom: 32px; }
+  .card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background: #fff; }
+  .card .img { height: 220px; background: #f4f4f4; display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 13px; overflow: hidden; }
+  .card .img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card .body { padding: 12px; }
+  .card h3 { font-size: 15px; margin: 0 0 6px; }
+  .card h3 a { color: #111; text-decoration: none; }
+  .card .cat { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .card .stock { font-size: 12px; color: #2e7d32; }
+  .card .price { font-weight: 700; font-size: 16px; margin: 6px 0 2px; }
+  .card .price-note { font-size: 11px; color: #999; margin: 0 0 6px; }
+  .card .sku { font-size: 12px; color: #999; }
+  .btn { display: inline-block; background: #111; color: #fff; padding: 8px 14px; border-radius: 4px; text-decoration: none; font-size: 13px; margin-top: 6px; cursor: pointer; border: none; }
+  .interest-btn.added { background: #2e7d32; }
+  .added-pulse { animation: addedPulse 0.35s ease; }
+  @keyframes addedPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+    100% { transform: scale(1); }
+  }
+
+  .desc { margin-top: 40px; font-size: 15px; }
+  .faq h2 { font-size: 20px; margin-top: 32px; }
+  .faq p { margin: 12px 0; }
+  footer { background: #111; color: #ccc; padding: 32px 24px; margin-top: 48px; font-size: 14px; }
+  footer a { color: #ccc; }
+
+  /* İlgilendiğim Ürünler paneli */
+  .interest-panel {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 320px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-radius: 10px;
+    padding: 16px;
+    z-index: 999;
+  }
+  .interest-panel h3 { margin: 0 0 8px; font-size: 16px; }
+  .interest-count { font-size: 13px; color: #666; margin-bottom: 10px; }
+  .interest-list { max-height: 180px; overflow-y: auto; margin-bottom: 12px; }
+  .interest-empty { font-size: 13px; color: #999; padding: 8px 0; }
+  .interest-item { font-size: 13px; padding: 8px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .interest-item .info { line-height: 1.3; }
+  .interest-item .info .name { display: block; color: #111; }
+  .interest-item .info .code { display: block; color: #888; font-size: 12px; }
+  .interest-item .remove { background: none; border: none; color: #c62828; font-size: 16px; cursor: pointer; line-height: 1; padding: 0 4px; }
+  .whatsapp-interest-btn {
+    display: block;
+    width: 100%;
+    background: #25D366;
+    color: #fff;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+  .interest-warning { font-size: 12px; color: #c62828; margin-top: 8px; min-height: 16px; }
+  .panel-highlight { animation: panelHighlight 0.6s ease; }
+  @keyframes panelHighlight {
+    0% { box-shadow: 0 8px 24px rgba(37,211,102,0.0); }
+    40% { box-shadow: 0 0 0 3px rgba(37,211,102,0.55), 0 8px 24px rgba(0,0,0,0.12); }
+    100% { box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  }
+
+  @media (max-width: 768px) {
+    .interest-panel {
+      left: 12px; right: 12px; bottom: 12px; width: auto;
+      max-height: 45vh; overflow-y: auto;
+    }
+    .interest-list { max-height: 120px; }
+    .container { padding-bottom: 360px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  Bale barları, okul ve stüdyo ekipmanlarında kurumsal üretim ve proje desteği.
+</div>
+
+<header>
+  <a class="logo" href="#">ASSA SPOR</a>
+  <div class="contact">WhatsApp: +90 501 317 82 13 &nbsp;|&nbsp; Teklif Al</div>
+</header>
+
+<div class="container">
+
+  <section class="page-hero">
+    <h1>Bale Barı Modellerimiz</h1>
+    <p>Okullar, dans stüdyoları, belediye kurs merkezleri ve spor salonları için dayanıklı, kullanıma hazır ve proje bazlı bale barı çözümleri.</p>
+  </section>
+
+  <!-- Alt kategoriler -->
+  <div class="subcats">
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/agirlikli-yukseklik-ayarli-bale-bari.jpg" alt="Ayarlanabilir Modeller"></div>
+      <div class="body"><h3>Ayarlanabilir Modeller</h3><div class="cat">5 Ürün</div></div>
+    </div>
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/duvara-monte-tekli-bale-bari.jpg" alt="Duvara Monte Sistemler"></div>
+      <div class="body"><h3>Duvara Monte Sistemler</h3><div class="cat">2 Ürün</div></div>
+    </div>
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/cift-tarafli-yatay-bale-bari.jpg" alt="Taşınabilir Modeller"></div>
+      <div class="body"><h3>Taşınabilir Modeller</h3><div class="cat">7 Ürün</div></div>
+    </div>
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/sabit-tip-ciftli-bale-bari.jpg" alt="Sabit Yükseklik Modelleri"></div>
+      <div class="body"><h3>Sabit Yükseklik Modelleri</h3><div class="cat">3 Ürün</div></div>
+    </div>
+  </div>
+
+  <!-- 1. Ayarlanabilir Modeller -->
+  <h2 class="cat-heading">Ayarlanabilir Modeller</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/agirlikli-yukseklik-ayarli-bale-bari.jpg" alt="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Ağırlıklı Taban)"></div>
+      <div class="body">
+        <h3><a href="#">Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Ağırlıklı Taban)</a></h3>
+        <div class="cat">Bale Barları, Ayarlanabilir Modeller, Taşınabilir Modeller</div>
+        <div class="stock">Stokta</div>
+        <div class="price">17.144,64 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-016</div>
+        <button class="btn interest-btn" data-product-name="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Ağırlıklı Taban)" data-product-sku="BL-016">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/ayarlanabilir-bale-bari-mor.jpg" alt="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Mor)"></div>
+      <div class="body">
+        <h3><a href="#">Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Mor)</a></h3>
+        <div class="cat">Bale Barları, Ayarlanabilir Modeller, Taşınabilir Modeller</div>
+        <div class="stock">Stokta</div>
+        <div class="price">11.864,16 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-010 M</div>
+        <button class="btn interest-btn" data-product-name="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Mor)" data-product-sku="BL-010 M">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/ayarlanabilir-bale-bari-krem.jpg" alt="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Krem)"></div>
+      <div class="body">
+        <h3><a href="#">Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Krem)</a></h3>
+        <div class="cat">Bale Barları, Ayarlanabilir Modeller, Taşınabilir Modeller</div>
+        <div class="stock">Stokta</div>
+        <div class="price">11.842,56 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-010 K</div>
+        <button class="btn interest-btn" data-product-name="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Krem)" data-product-sku="BL-010 K">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/ayarlanabilir-bale-bari-siyah.jpg" alt="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Siyah)"></div>
+      <div class="body">
+        <h3><a href="#">Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Siyah)</a></h3>
+        <div class="cat">Bale Barları, Ayarlanabilir Modeller, Taşınabilir Modeller</div>
+        <div class="stock">Stokta</div>
+        <div class="price">11.292,48 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-005 S</div>
+        <button class="btn interest-btn" data-product-name="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Siyah)" data-product-sku="BL-005 S">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/ayarlanabilir-bale-bari-kirmizi.jpg" alt="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Kırmızı)"></div>
+      <div class="body">
+        <h3><a href="#">Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Kırmızı)</a></h3>
+        <div class="cat">Bale Barları, Ayarlanabilir Modeller, Taşınabilir Modeller</div>
+        <div class="stock">Stokta</div>
+        <div class="price">11.292,48 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-005 K</div>
+        <button class="btn interest-btn" data-product-name="Taşınabilir Bale Barı – Ayarlanabilir Yükseklik (Kırmızı)" data-product-sku="BL-005 K">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 2. Duvara Monte Sistemler -->
+  <h2 class="cat-heading">Duvara Monte Sistemler</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/duvara-monte-tekli-bale-bari.jpg" alt="Duvara Monte Bale Barı – Tekli Model"></div>
+      <div class="body">
+        <h3><a href="#">Duvara Monte Bale Barı – Tekli Model</a></h3>
+        <div class="cat">Bale Barları, Duvara Monte Sistemler</div>
+        <div class="stock">Stokta</div>
+        <div class="price">4.564,80 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-011</div>
+        <button class="btn interest-btn" data-product-name="Duvara Monte Bale Barı – Tekli Model" data-product-sku="BL-011">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/duvara-monte-ciftli-bale-bari.jpg" alt="Duvara Monte Çiftli Bale Barı – Sabit Model"></div>
+      <div class="body">
+        <h3><a href="#">Duvara Monte Çiftli Bale Barı – Sabit Model</a></h3>
+        <div class="cat">Bale Barları, Duvara Monte Sistemler</div>
+        <div class="stock">Stokta</div>
+        <div class="price">5.476,32 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-014</div>
+        <button class="btn interest-btn" data-product-name="Duvara Monte Çiftli Bale Barı – Sabit Model" data-product-sku="BL-014">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 3. Taşınabilir Modeller -->
+  <h2 class="cat-heading">Taşınabilir Modeller</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/cift-tarafli-yatay-bale-bari.jpg" alt="Taşınabilir Bale Barı – Çift Taraflı Yatay Model"></div>
+      <div class="body">
+        <h3><a href="#">Taşınabilir Bale Barı – Çift Taraflı Yatay Model</a></h3>
+        <div class="cat">Bale Barları, Taşınabilir Modeller, Çift Taraflı Modeller</div>
+        <div class="stock">Stokta</div>
+        <div class="price">12.319,20 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-017</div>
+        <button class="btn interest-btn" data-product-name="Taşınabilir Bale Barı – Çift Taraflı Yatay Model" data-product-sku="BL-017">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/tasinabilir-sabit-bale-bari-siyah.jpg" alt="Taşınabilir Bale Barı – Sabit Yükseklik (Siyah)"></div>
+      <div class="body">
+        <h3><a href="#">Taşınabilir Bale Barı – Sabit Yükseklik (Siyah)</a></h3>
+        <div class="cat">Bale Barları, Taşınabilir Modeller, Sabit Yükseklik</div>
+        <div class="stock">Stokta</div>
+        <div class="price">10.952,64 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-003 S</div>
+        <button class="btn interest-btn" data-product-name="Taşınabilir Bale Barı – Sabit Yükseklik (Siyah)" data-product-sku="BL-003 S">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/tasinabilir-sabit-bale-bari-kirmizi.jpg" alt="Taşınabilir Bale Barı – Sabit Yükseklik (Kırmızı)"></div>
+      <div class="body">
+        <h3><a href="#">Taşınabilir Bale Barı – Sabit Yükseklik (Kırmızı)</a></h3>
+        <div class="cat">Bale Barları, Taşınabilir Modeller, Sabit Yükseklik</div>
+        <div class="stock">Stokta</div>
+        <div class="price">10.952,64 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-003 K</div>
+        <button class="btn interest-btn" data-product-name="Taşınabilir Bale Barı – Sabit Yükseklik (Kırmızı)" data-product-sku="BL-003 K">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 4. Sabit Yükseklik Modelleri -->
+  <h2 class="cat-heading">Sabit Yükseklik Modelleri</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/sabit-tip-ciftli-bale-bari.jpg" alt="Sabit Tip Çiftli Bale Barı – Sabit Yükseklik"></div>
+      <div class="body">
+        <h3><a href="#">Sabit Tip Çiftli Bale Barı – Sabit Yükseklik</a></h3>
+        <div class="cat">Bale Barları, Sabit Modeller, Çiftli Modeller</div>
+        <div class="stock">Stokta</div>
+        <div class="price">9.126,72 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-012</div>
+        <button class="btn interest-btn" data-product-name="Sabit Tip Çiftli Bale Barı – Sabit Yükseklik" data-product-sku="BL-012">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/sabit-ikili-bale-bari-kirmizi.jpg" alt="Sabit İkili Bale Barı - Kırmızı"></div>
+      <div class="body">
+        <h3><a href="#">Sabit İkili Bale Barı - Kırmızı</a></h3>
+        <div class="cat">Bale Barları, Sabit Modeller, Çiftli Modeller</div>
+        <div class="stock">Stokta</div>
+        <div class="price">8.910,00 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-012 K</div>
+        <button class="btn interest-btn" data-product-name="Sabit İkili Bale Barı - Kırmızı" data-product-sku="BL-012 K">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img"><img src="assets/images/bale-barlari/sabit-ikili-bale-bari-siyah.jpg" alt="Sabit İkili Bale Barı - Siyah"></div>
+      <div class="body">
+        <h3><a href="#">Sabit İkili Bale Barı - Siyah</a></h3>
+        <div class="cat">Bale Barları, Sabit Modeller, Çiftli Modeller</div>
+        <div class="stock">Stokta</div>
+        <div class="price">8.910,00 TL</div>
+        <div class="price-note">Proje ve adet bazlı fiyatlandırma yapılabilir.</div>
+        <div class="sku">Ürün Kodu: BL-012 S</div>
+        <button class="btn interest-btn" data-product-name="Sabit İkili Bale Barı - Siyah" data-product-sku="BL-012 S">İlgilendiğim Ürünlere Ekle</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="desc">
+    <p>ASSA SPOR bale barları; dans okulları, özel okullar, belediye kurs merkezleri, spor salonları, sanat merkezleri ve kurumsal eğitim alanları için üretilen dayanıklı ekipman çözümleridir. Kullanım alanına göre duvara monte, portatif, yükseklik ayarlı veya sabit yükseklik modeller tercih edilebilir.</p>
+    <p>Bale barı seçiminde alan ölçüsü, kullanıcı yaş grubu, kullanım yoğunluğu, montaj tipi ve ürün stabilitesi dikkate alınmalıdır. ASSA SPOR, okul ve stüdyo projelerinde ürün seçimi, ölçülendirme, renk tercihi ve montaj planlaması konusunda kurumsal destek sunar.</p>
+    <p>Toplu alım, okul projesi, belediye kurs merkezi, dans stüdyosu veya spor salonu ihtiyaçlarında teklif almak için ASSA SPOR ile WhatsApp üzerinden iletişime geçebilirsiniz.</p>
+
+    <div class="faq">
+      <h2>Bale Barları Hakkında Sıkça Sorulan Sorular</h2>
+
+      <p><strong>1. Bale barı seçerken nelere dikkat edilmeli?</strong><br>
+      Kullanım alanı, kullanıcı yaş grubu, ürün uzunluğu, montaj tipi ve bar yüksekliği dikkate alınmalıdır. Yoğun kullanılan okul ve stüdyolarda sağlam gövde ve güvenli bağlantı sistemi önceliklidir.</p>
+
+      <p><strong>2. Duvara monte ve taşınabilir bale barı arasındaki fark nedir?</strong><br>
+      Duvara monte modeller sabit kullanım alanları için uygundur ve alan tasarrufu sağlar. Taşınabilir modeller ise farklı alanlarda taşınıp kullanılabilir; düzeni sık değişen stüdyolar için avantajlıdır.</p>
+
+      <p><strong>3. Yükseklik ayarlı bale barı gerekli mi?</strong><br>
+      Farklı yaş gruplarının aynı alanda çalıştığı okul, kurs merkezi ve stüdyolar için yükseklik ayarlı modeller daha kullanışlıdır. Tek yaş grubu için sabit yükseklik modeller yeterlidir.</p>
+
+      <p><strong>4. Sabit yükseklik bale barı kimler için uygundur?</strong><br>
+      Belirli bir yaş grubuna hizmet veren, düzeni sabit stüdyo ve salonlar için idealdir. Sabit yapısı sayesinde yüksek stabilite ve uzun ömürlü kullanım sunar.</p>
+
+      <p><strong>5. Okullar ve stüdyolar için toplu alım yapılabilir mi?</strong><br>
+      Evet. ASSA SPOR; okullar, dans stüdyoları, belediye kurs merkezleri ve kurumsal projeler için toplu alım ve proje bazlı teklif desteği sunar.</p>
+
+      <p><strong>6. Montaj desteği veriliyor mu?</strong><br>
+      Ankara içi ve proje kapsamına göre farklı şehirlerde montaj desteği planlanabilir. Montaj ihtiyacı teklif aşamasında ayrıca değerlendirilir.</p>
+
+      <p><strong>7. Özel ölçü veya renk yapılabilir mi?</strong><br>
+      Proje ve üretim uygunluğuna göre özel ölçü, renk ve model seçenekleri değerlendirilebilir. Detaylar için ASSA SPOR ile iletişime geçilmelidir.</p>
+    </div>
+  </div>
+</div>
+
+<!-- İlgilendiğim Ürünler paneli -->
+<aside class="interest-panel" id="interestPanel">
+  <h3>İlgilendiğim Ürünler</h3>
+  <div class="interest-count" id="interestCount">0 ürün seçildi</div>
+  <div class="interest-list" id="interestList">
+    <div class="interest-empty">Henüz ürün seçmediniz.</div>
+  </div>
+  <button class="whatsapp-interest-btn" id="whatsappBtn">Seçili Ürünler İçin WhatsApp'tan Bilgi Al</button>
+  <div class="interest-warning" id="interestWarning"></div>
+</aside>
+
+<footer>
+  <p><strong>ASSA SPOR</strong>, okul, kulüp, stüdyo ve kurumsal spor alanları için dayanıklı spor ekipmanları üreten ve proje bazlı çözümler sunan Ankara merkezli bir markadır.</p>
+  <p>
+    Bize Ulaşın &nbsp;|&nbsp; Kurumsal &nbsp;|&nbsp; Banka Bilgileri &nbsp;|&nbsp; Kampanyalar &nbsp;|&nbsp; Blog<br>
+    Gizlilik Politikası &nbsp;|&nbsp; Çerez Politikası &nbsp;|&nbsp; Mesafeli Satış Sözleşmesi &nbsp;|&nbsp; İade ve Değişim Politikası &nbsp;|&nbsp; Kullanım Şartları
+  </p>
+  <p>
+    +90 501 317 82 13 &nbsp;|&nbsp; +90 532 480 76 99 &nbsp;|&nbsp; tmakyuz@hotmail.com<br>
+    Web: <a href="https://www.assaspor.com">www.assaspor.com</a> &nbsp;|&nbsp; Instagram: @assaspor<br>
+    Önder Mahallesi, Abalı Sokak No:1/D, 06140 Altındağ / Ankara
+  </p>
+  <p><strong>2026</strong> © ASSA SPOR. Tüm hakları saklıdır.</p>
+</footer>
+
+<script>
+(function () {
+  var WHATSAPP_NUMBER = "905013178213";
+  var selected = []; // { name, sku }
+
+  var listEl = document.getElementById("interestList");
+  var countEl = document.getElementById("interestCount");
+  var warningEl = document.getElementById("interestWarning");
+  var panelEl = document.getElementById("interestPanel");
+  var whatsappBtn = document.getElementById("whatsappBtn");
+
+  function findButtonBySku(sku) {
+    var btns = document.querySelectorAll(".interest-btn");
+    for (var i = 0; i < btns.length; i++) {
+      if (btns[i].getAttribute("data-product-sku") === sku) return btns[i];
+    }
+    return null;
+  }
+
+  function resetButton(btn) {
+    if (!btn) return;
+    btn.classList.remove("added");
+    btn.textContent = "İlgilendiğim Ürünlere Ekle";
+  }
+
+  function renderList() {
+    countEl.textContent = selected.length + " ürün seçildi";
+    listEl.innerHTML = "";
+    if (selected.length === 0) {
+      var empty = document.createElement("div");
+      empty.className = "interest-empty";
+      empty.textContent = "Henüz ürün seçmediniz.";
+      listEl.appendChild(empty);
+      return;
+    }
+    selected.forEach(function (item) {
+      var row = document.createElement("div");
+      row.className = "interest-item";
+
+      var info = document.createElement("div");
+      info.className = "info";
+      var name = document.createElement("span");
+      name.className = "name";
+      name.textContent = item.name;
+      var code = document.createElement("span");
+      code.className = "code";
+      code.textContent = item.sku;
+      info.appendChild(name);
+      info.appendChild(code);
+
+      var remove = document.createElement("button");
+      remove.className = "remove";
+      remove.setAttribute("aria-label", "Listeden çıkar");
+      remove.textContent = "✕";
+      remove.addEventListener("click", function () {
+        removeItem(item.sku);
+      });
+
+      row.appendChild(info);
+      row.appendChild(remove);
+      listEl.appendChild(row);
+    });
+  }
+
+  function highlightPanel() {
+    panelEl.classList.remove("panel-highlight");
+    void panelEl.offsetWidth; // reflow
+    panelEl.classList.add("panel-highlight");
+  }
+
+  function addItem(name, sku, btn) {
+    for (var i = 0; i < selected.length; i++) {
+      if (selected[i].sku === sku) return; // aynı ürün tekrar eklenmesin
+    }
+    selected.push({ name: name, sku: sku });
+    if (btn) {
+      btn.classList.add("added");
+      btn.textContent = "✓ Listeye Eklendi";
+      btn.classList.remove("added-pulse");
+      void btn.offsetWidth;
+      btn.classList.add("added-pulse");
+    }
+    warningEl.textContent = "";
+    renderList();
+    highlightPanel();
+  }
+
+  function removeItem(sku) {
+    selected = selected.filter(function (item) { return item.sku !== sku; });
+    resetButton(findButtonBySku(sku));
+    renderList();
+  }
+
+  // Ürün butonlarını dinle
+  var buttons = document.querySelectorAll(".interest-btn");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      var name = this.getAttribute("data-product-name");
+      var sku = this.getAttribute("data-product-sku");
+      var already = false;
+      for (var j = 0; j < selected.length; j++) {
+        if (selected[j].sku === sku) { already = true; break; }
+      }
+      if (already) {
+        removeItem(sku); // tekrar tıklanırsa listeden çıkar
+      } else {
+        addItem(name, sku, this);
+      }
+    });
+  }
+
+  // WhatsApp mesajı
+  whatsappBtn.addEventListener("click", function () {
+    if (selected.length === 0) {
+      warningEl.textContent = "Lütfen önce ilgilendiğiniz ürünleri seçin.";
+      return;
+    }
+    warningEl.textContent = "";
+    var msg = "Merhaba, aşağıdaki ürünlerle ilgili bilgi almak istiyorum:\n\n";
+    selected.forEach(function (item, idx) {
+      msg += (idx + 1) + ". " + item.name + "\n";
+      msg += "Ürün Kodu: " + item.sku + "\n\n";
+    });
+    msg += "Bu ürünlerle ilgili daha fazla bilgi alabilir miyim?\n\n";
+    msg += "Ödeme seçenekleri nelerdir?\n";
+    msg += "Ürünler stokta mevcut mudur?\n";
+    msg += "Kargo dahil fiyatı nedir?\n";
+    msg += "Toplu alım veya proje bazlı fiyatlandırma yapılabilir mi?";
+    var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
+    window.open(url, "_blank");
+  });
+
+  renderList();
+})();
+</script>
+
+</body>
+</html>
